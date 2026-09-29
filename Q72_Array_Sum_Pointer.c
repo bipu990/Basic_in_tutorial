@@ -1,4 +1,4 @@
-//Ques : Sum of the numbers in given array.
+ //Ques : Sum of the numbers in given array.
 
 #include <stdio.h>
 int main ()
