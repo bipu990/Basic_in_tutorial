@@ -4,25 +4,25 @@
 int main ()
 {
     int x;
-    printf ("Input a number : ");
+    printf ("Input a value : ");
     scanf ("%d",&x);
 
     int arr[x];
-    int *p = arr;
+    int *p=arr;
 
     for (int i=0;i<x;i++)
     {
-        scanf ("%d",(p+i));
+        scanf ("%d",p+i);
     }
 
-    int m=0;
-
+    int m=0,sum=0;
     for (int i=0;i<x;i++)
     {
-        m = *(p+i)+m;
+        m = *(p+i)%10;
+        sum = sum+m;
+        *(p+i) = *(p+i)/10;
     }
-
-    printf ("The sum of the number is : %d",m);
+    printf ("The sum of the numebr is : %d",sum);
 
     return 0;
 }
